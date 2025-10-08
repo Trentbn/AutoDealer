@@ -320,7 +320,7 @@ body {
   background-color: rgb(20, 20, 20);
 }
 
-h1, h2, h3, p {
+h1, p {
   color: rgb(237, 237, 237);
 }
 
@@ -554,12 +554,15 @@ section#reviewWrapper {
   padding: 2rem 0;
   text-align: center;
 }
+section#reviewWrapper h2 {
+  color: black;
+}
 
 #cards {
   text-align: center;
 }
 #cards h3 {
-  margin: 2rem §gutter 0 10px;
+  margin: 2rem 10px 0 10px;
   text-align: center;
   color: rgb(20, 20, 20);
 }

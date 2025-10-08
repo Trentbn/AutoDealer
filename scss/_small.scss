@@ -20,7 +20,7 @@ body {
     background-color: $primaryColor;
 }
 
-h1, h2, h3, p {
+h1, p {
     color: $secondaryColor;
 }
 
@@ -240,12 +240,13 @@ section#reviewWrapper {
     background-color: $secondaryColor; 
     padding: 2rem 0; 
     text-align: center;
+    h2 {color: black;}
 }
 
 #cards {
     text-align: center;
    h3 {
-    margin: 2rem §gutter 0 $gutter;
+    margin: 2rem $gutter 0 $gutter;
     text-align: center;
     color: $primaryColor;
     }
