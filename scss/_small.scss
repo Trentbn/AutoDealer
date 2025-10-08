@@ -1,0 +1,274 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} // end all elements
+
+
+/* --------------------------- BODY --------------------------- */
+body {
+    font-family: $defaultFont;
+    font-weight: $lightWeight;
+    min-width: 320px;
+    background-color: $primaryColor;
+}
+
+h1, h2, h3, p {
+    color: $secondaryColor;
+}
+
+
+/* --------------------------- HEADER --------------------------- */
+#headerWrapper {
+    border-bottom: 1px solid $greyColor;
+    background-color: $secondaryColor;    
+}
+header {
+    display: grid;
+    grid-template-columns: auto 200px;
+    grid-template-rows: auto auto;
+    column-gap: $gutter;
+    align-items: center; //vertically
+    padding: .5rem $gutter;
+
+    p {
+        color: black;
+        grid-column: 1/2;  
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+
+} // end header
+
+
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+
+#theButton::before {
+    content: "\2630";
+}
+#theButton.open::before {
+    content: "\2715";
+}
+
+nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+nav.open {
+    grid-template-rows: 1fr;
+}
+
+#theButton {
+    color: $primaryColor;
+    border: none;
+    background:none;
+    font-size: 2rem;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    cursor: pointer;
+}
+
+nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    a {
+        text-decoration: none;
+        color: $secondaryColor;
+        display: block;
+        padding: .75rem $gutter;
+        border-bottom: 1px solid rgb(209, 209, 209);
+    }
+
+    li.active a {
+        color: $accentColor;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------- MAIN --------------------------- */
+main {
+    
+    h1 {
+        padding: 1rem $gutter.5rem $gutter;
+        font-size: 1.5rem;
+        font-weight: $lightWeight;
+        margin: .5rem $gutter;
+    }
+    p {
+        margin: 0 $gutter;
+        padding: .5rem $gutter;
+        line-height: $leading;
+    }
+}// end main
+
+.parentHero {
+    position: relative;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    p {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background: linear-gradient(180deg,rgba(0, 0, 0, 1) 26%, rgba(0, 0, 0, 0.54) 69%, rgba(0, 0, 0, 0) 100%);
+        color: white;
+        padding: 1rem;
+        margin: 0;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+}
+
+#cardsParent {
+    display: flex;
+    flex-wrap: wrap;
+ 
+}
+
+#cardsParent > div {
+    border: 1px white solid;
+    text-align: center;
+    margin: 1rem $gutter;
+    position: relative;
+    background-color: $secondaryColor;
+
+    img {
+        margin: 1rem;
+        position: relative;
+    }
+
+    h2 {
+        color: $primaryColor;
+    }
+
+    p {
+        text-align: left;
+        margin-bottom: 5rem;
+        color: $primaryColor;
+    }
+
+    a {
+        display: block;
+        background-color: $primaryColor;
+        color: white;
+        padding: .5rem;
+        width: 50%;
+        margin: 1rem auto;
+        border-radius: 4px;
+        text-decoration: none;
+        position: absolute;
+        bottom: 0;
+        left: 24%;
+    }
+}
+
+// ANIMATIONS HERE
+.bounce:hover img {animation: myBounce 1s 1;}
+.spin:hover img {animation: mySpin 1s 1;}
+.shake:hover img {animation: myShake 1s 1;}
+.shrink:hover img {animation: myShrink 1s 1;}
+
+// BOUNCE ANIMATION
+@keyframes myBounce {
+    0% {bottom:  0px; animation-timing-function: ease-out;}
+    25% {bottom:  10px; animation-timing-function: ease-in;}
+    50% {bottom: -5px; animation-timing-function: ease-out;}
+    75% {bottom: 5px; animation-timing-function: ease-in;}
+    100% {bottom: 0px; animation-timing-function: ease-out;}
+}
+
+// SPIN ANIMATION
+@keyframes mySpin {
+    from {transform:rotate(0deg)}
+    to {transform:rotate(360deg)}
+}
+
+// SHAKE ANIMATION
+@keyframes myShake {
+    0%   { transform: translateX(0); }
+    25%  { transform: translateX(10px); }
+    50%  { transform: translateX(-5px); }
+    75%  { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+  }
+
+  // SHRINK ANIMATION
+  @keyframes myShrink {
+    0%   { transform: scale(1); }
+    40%  { transform: scale(0); opacity: 0; }
+    60%  { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+
+// REVIEW SECTION
+
+section#reviewWrapper {
+    background-color: $secondaryColor; 
+    padding: 2rem 0; 
+    text-align: center;
+}
+
+#cards {
+    text-align: center;
+   h3 {
+    margin: 2rem §gutter 0 $gutter;
+    text-align: center;
+    color: $primaryColor;
+    }
+
+    img {
+        width: 20px;
+    }
+
+    p {
+        color: black;
+    }
+}
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+    background-color: $primaryColor
+} // end footer wrapper
+
+footer {
+    font-size: .85rem;
+    padding: 1rem $gutter;
+    color: $greyColor;
+    text-align: center;
+    line-height: $leading;
+    a {color: $greyColor;}
+}// end footer

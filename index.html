@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Navigation Example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/styles.min.css">
+
+<!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<div id="headerWrapper">
+	<header>
+        <img src="images/car_logo.png" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x" alt="logo" width="200px">
+        <a href="tel:12345678"><p id="phone">(702) 123-4567</p></a>
+	</header>
+</div><!-- end header wrapper -->
+
+    
+    
+<div id="navWrapper">
+    <nav id="theNav">
+        <button id="theButton"></button>
+        <ul>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Services</a></li>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</div> <!-- end nav wrapper -->
+
+<div id="mainWrapper">
+    <main>
+        
+        <div class="parentHero">
+            <img src="images/precisionAuto.webp" alt="" width="1500" height="780">
+            <p>Welcome to Precision Auto</p>
+        </div>
+        <h1>The Precision Gaurantee</h1>
+        <p>At Precision Auto, we take pride in delivering honest, reliable, and high-quality service for every vehicle that comes through our doors. Our certified technicians combine years of experience with the latest diagnostic tools to ensure your car gets the care it deserves—whether it's a routine oil change or a major repair. We're committed to transparency, fair pricing, and getting the job done right the first time, so you can drive away with confidence knowing your vehicle is in expert hands.</p>
+
+        <section id="cardsParent">
+            <div class="bounce">
+                <img src="images/tuning.svg" alt="" width="75" height="75">
+                <h2>Tuning</h2>
+                <p>Precision Auto Body offers professional engine tuning to maximize your car's performance, fuel efficiency, and overall responsiveness.</p>
+                <a href="index.html">Learn More</a>
+            </div>
+            <div class="shrink">
+                <img src="images/oil.svg" alt="" width="75" height="75">
+                <h2>Oil Change</h2>
+                <p>We deliver quick, high-quality oil changes using premium oils and filters to keep your engine clean and running smoothly.
+                </p>
+                <a href="index.html">Learn More</a>
+            </div>
+            <div class="spin">
+                <img src="images/brakes.svg" alt="" width="75" height="75">
+                <h2>Brakes</h2>
+                <p>Our certified technicians provide expert brake inspections, repairs, and replacements to ensure your vehicle stops safely every time.
+                </p>
+                <a href="index.html">Learn More</a>
+            </div>
+            <div class="shake">
+                <img src="images/alignment.svg" alt="" width="75" height="75">
+                <h2>Alignment</h2>
+                <p>Our precise wheel alignment service improves handling, tire life, and ride comfort for a safer, smoother drive.</p>
+                <a href="index.html">Learn More</a>
+            </div>
+        </section>
+
+        <section id="reviewWrapper">
+            <h2>What Our Customers Say</h2>
+            <div id="cards"></div>
+
+        </section>
+        
+    </main>
+</div><!-- end main wrapper -->
+    
+<div id="footerWrapper">
+    <footer>
+        <p>Copyright &copy; Trent Nelson &bull; 2025 Precision Auto Inc. All rights reserved. 
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="#">Clients</a></p>
+    </footer>
+</div> <!-- end footer wrapper -->
+   
+<script src="js/script.js" type="module"></script>
+</body>
+</html> 

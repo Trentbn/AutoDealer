@@ -1,0 +1,21 @@
+header, nav, main {
+    max-width: 960px;
+    margin: auto;
+}
+
+/* NAVIGATION STUFF GOES HERE  */
+
+// MAIN STUFF HERE
+#cardsParent {
+    div {
+        flex-basis: 20%;
+        flex-grow: 1;
+    }
+}
+
+// REVIEW SECTION GOES HERE
+
+#cards {
+    display: grid;
+    grid-template-columns: auto auto;
+}

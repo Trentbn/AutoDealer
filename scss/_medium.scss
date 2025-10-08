@@ -1,0 +1,36 @@
+/* NAVIGATION STUFF GOES HERE  */
+#theButton {
+    display: none;
+}
+
+nav {
+    grid-template-rows: 1fr;
+}
+
+nav ul, nav ul.open {
+    display: flex;
+
+    li a {
+        padding: .4rem 1rem;
+        border: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+#navWrapper {
+    border: 1px solid rgb(198, 198, 198);
+}
+
+// MAIN STUFF GOES HERE
+
+
+#cardsParent {
+    margin: auto;
+    div {
+        width: 46%;
+    }
+}
+    
